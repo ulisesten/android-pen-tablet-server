@@ -1,0 +1,12 @@
+#! /usr/bin/env node
+
+function websockets(io) {
+    io.on('connection', socket => {
+
+        var id = socket.handshake.auth.id;
+        console.log( id ,"connected" );
+
+    });
+}
+
+module.exports = websockets;
